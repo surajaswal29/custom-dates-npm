@@ -1,31 +1,24 @@
-import { io } from "socket.io-client";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { demoAction } from "./actions/demoActions";
 
 const Demo = () => {
-  const socket = io.connect("http://localhost:8000");
+  const { loading, data } = useSelector((state) => state.demo);
+  const dispatch = useDispatch();
 
-  const sendMessageHandler = () => {
-    socket.emit("message", "Hello World");
-  };
+  useEffect(() => {
+    dispatch(demoAction());
+  }, [dispatch]);
 
   return (
     <>
-      <div className="w-full h-screen bg-gray-100 flex items-center justify-center">
-        <div className="w-6/12 bg-white border p-4 flex flex-col">
-          <h1 className="text-2xl my-3 font-semibold">👤 Chat App</h1>
-          <input
-            type="text"
-            placeholder="Message..."
-            className="border p-2 my-2"
-          />
-          <button
-            type="submit"
-            className="border p-2 bg-red-500 text-white"
-            onClick={sendMessageHandler}
-          >
-            Send
-          </button>
+      {loading ? (
+        <h1>Loading...</h1>
+      ) : (
+        <div className="App">
+          <h1>{data.message}</h1>
         </div>
-      </div>
+      )}
     </>
   );
 };
