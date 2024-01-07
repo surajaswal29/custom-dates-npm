@@ -28,7 +28,7 @@ const dateInfo = await useCustomDates()
 console.log(dateInfo)
 ```
 
-####Output
+**Output**
 
 ```javascript
 {
