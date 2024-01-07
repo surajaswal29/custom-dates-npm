@@ -1,5 +1,7 @@
 # use-custom-dates
 
+[![JavaScript](https://img.shields.io/badge/Language-JavaScript-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com) [![Version](https://img.shields.io/badge/Version-1.0.0-blue)](https://github.com/surajaswal29/custom-dates/releases) [![License](https://img.shields.io/badge/License-ISC-green)](https://opensource.org/licenses/ISC) [![Downloads](https://img.shields.io/github/downloads/surajaswal29/custom-dates/latest/total.svg)](https://github.com/surajaswal29/custom-dates/releases) [![Contributors](https://img.shields.io/github/contributors/surajaswal29/custom-dates.svg)](https://github.com/surajaswal29/custom-dates/graphs/contributors) [![GitHub Issues](https://img.shields.io/github/issues/surajaswal29/custom-dates.svg)](https://github.com/surajaswal29/custom-dates/issues)
+
 This npm package, named "use-custom-dates", provides a utility function called `useCustomDates` that generates a customizable date range based on the current date. The function returns an object containing information about the current date, the previous year's date, and an array representing the labels for the last 7 days, including the day of the month and the corresponding month name.
 
 ## Key Features
@@ -10,21 +12,23 @@ This npm package, named "use-custom-dates", provides a utility function called `
 
 ## Installation
 
-````bash
+```
 npm install use-custom-dates
+```
 
 ## Usage
+
 ```javascript
-    Copy code
-    const useCustomDates = require('use-custom-dates');
+// Your code to copy
+const useCustomDates = require("use-custom-dates")
 
-    // Get date-related information
-    const dateInfo = await useCustomDates();
+// Get date-related information
+const dateInfo = await useCustomDates()
 
-    // Access properties from the returned object
-    console.log(dateInfo.current.todayDate);
-    console.log(dateInfo.last7days.L7D);
-````
+// Access properties from the returned object
+console.log(dateInfo.current.todayDate)
+console.log(dateInfo.last7days.L7D)
+```
 
 ## Returned Object Properties
 
@@ -54,13 +58,12 @@ last7days
 ## Examples
 
 ```javascript
-Copy code
 // Example 1: Accessing current date information
-console.log(dateInfo.current.todayDate);
-console.log(dateInfo.current.weekDay);
+console.log(dateInfo.current.todayDate)
+console.log(dateInfo.current.weekDay)
 
 // Example 2: Accessing last 7 days' date range labels
-console.log(dateInfo.last7days.L7D);
+console.log(dateInfo.last7days.L7D)
 ```
 
 ## License
