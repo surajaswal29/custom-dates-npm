@@ -16,6 +16,5 @@
   ],
   "author": "Suraj Aswal",
   "license": "ISC",
-  "module": "index.js",
-  "type": "module"
+  "module": "index.js"
 }

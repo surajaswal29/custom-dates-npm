@@ -1,4 +1,4 @@
-const useCustomDates = async () => {
+exports.useCustomDates = async () => {
   const date = new Date()
   const year = date.getFullYear()
 
@@ -85,5 +85,3 @@ const useCustomDates = async () => {
     },
   }
 }
-
-export default useCustomDates
