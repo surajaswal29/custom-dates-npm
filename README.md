@@ -19,41 +19,87 @@ npm install use-custom-dates
 ## Usage
 
 ```javascript
-// Your code to copy
 const useCustomDates = require("use-custom-dates")
 
 // Get date-related information
 const dateInfo = await useCustomDates()
 
 // Access properties from the returned object
-console.log(dateInfo.current.todayDate)
-console.log(dateInfo.last7days.L7D)
+console.log(dateInfo)
+```
+
+####Output
+
+```javascript
+{
+  current: {
+    todayDate: '07',
+    weekDay: 'Sunday',
+    month: '01',
+    year: 2024,
+    date: '07/01/2024',
+    monthName: 'January',
+    monthLength: 31,
+    isLeapYear: true
+  },
+  previous: { year: 2023, month: 12, monthLength: 31, monthName: 'December' },
+  allMonths: [
+    { month: 'January', shortName: 'Jan', numOfDays: 31, weeks: 5 },
+    { month: 'February', shortName: 'Feb', numOfDays: 29, weeks: 4 },
+    { month: 'March', shortName: 'Mar', numOfDays: 31, weeks: 5 },
+    { month: 'April', shortName: 'Apr', numOfDays: 30, weeks: 5 },
+    { month: 'May', shortName: 'May', numOfDays: 31, weeks: 5 },
+    { month: 'June', shortName: 'Jun', numOfDays: 30, weeks: 5 },
+    { month: 'July', shortName: 'Jul', numOfDays: 31, weeks: 5 },
+    { month: 'August', shortName: 'Aug', numOfDays: 31, weeks: 5 },
+    { month: 'September', shortName: 'Sep', numOfDays: 30, weeks: 5 },
+    { month: 'October', shortName: 'Oct', numOfDays: 31, weeks: 5 },
+    { month: 'November', shortName: 'Nov', numOfDays: 30, weeks: 5 },
+    { month: 'December', shortName: 'Dec', numOfDays: 31, weeks: 5 }
+  ],
+  last7days: {
+    from_date: 1,
+    to_date: 7,
+    L7D: [
+        { label: '1 January' },
+        { label: '2 January' },
+        { label: '3 January' },
+        { label: '4 January' },
+        { label: '5 January' },
+        { label: '6 January' },
+        { label: '7 January' }
+    ]
+  }
+}
 ```
 
 ## Returned Object Properties
 
-current
+**current**
 
-- todayDate: Day of the month with leading zero.
-- weekDay: Day of the week (e.g., "Monday").
-- month: Month with leading zero.
-- year: Current year.
-- date: Full date string in UK format.
-- monthName: Full name of the current month.
-- monthLength: Number of days in the current month.
-- isLeapYear: Leap year status for the current year. previous
+- **todayDate:** Day of the month with leading zero.
+- **weekDay:** Day of the week (e.g., "Monday").
+- **month:** Month with leading zero.
+- **year:** Current year.
+- **date:** Full date string in UK format.
+- **monthName:** Full name of the current month.
+- **monthLength:** Number of days in the current month.
+- **isLeapYear:** Leap year status for the current year.
 
-- year: Previous year.
-- month: Previous month with leading zero.
-- monthLength: Number of days in the previous month.
-- monthName: Full name of the previous month.
-- allMonths: Array containing information about all months.
+**previous**
 
-last7days
+- **year:** Previous year.
+- **month:** Previous month with leading zero.
+- **monthLength:** Number of days in the previous month.
+- **monthName:** Full name of the previous month.
 
-- from_date: Start date of the last 7 days' range.
-- to_date: End date of the last 7 days' range.
-- L7D: Array of objects representing the last 7 days' date range labels. Each object has a label property containing the day of the month and the corresponding month name.
+**allMonths:** Array containing information about all months.
+
+**last7days**
+
+- **from_date:** Start date of the last 7 days' range.
+- **to_date:** End date of the last 7 days' range.
+- **L7D:** Array of objects representing the last 7 days' date range labels. Each object has a label property containing the day of the month and the corresponding month name.
 
 ## Examples
 
@@ -72,7 +118,7 @@ This project is licensed under the ISC License - see the LICENSE.md file for det
 
 ## Author
 
-Suraj Aswal
+[Suraj Aswal](https://github.com/surajaswal29)
 
 ## Repository
 

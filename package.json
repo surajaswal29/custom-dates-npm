@@ -1,6 +1,6 @@
 {
   "name": "use-custom-dates",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This npm package, named 'use-custom-dates', provides a utility function called useCustomDates that generates a customizable date range based on the current date. The function returns an object containing information about the current date, the previous year's date, and an array representing the labels for the last 7 days, including the day of the month and the corresponding month name.",
   "main": "index.js",
   "scripts": {
@@ -9,12 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/surajaswal29/custom-dates.git"
+    "url": "git+https://github.com/surajaswal29/custom-dates.git"
   },
   "keywords": [
     "use-custom-dates"
   ],
   "author": "Suraj Aswal",
   "license": "ISC",
-  "module": "index.js"
+  "module": "index.js",
+  "bugs": {
+    "url": "https://github.com/surajaswal29/custom-dates/issues"
+  },
+  "homepage": "https://github.com/surajaswal29/custom-dates#readme"
 }
